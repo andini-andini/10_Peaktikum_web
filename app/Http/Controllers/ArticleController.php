@@ -24,7 +24,7 @@ class ArticleController extends Controller
      */
     public function create()
     {
-        return view('create');
+        return view('articles.create');
     }
 
     /**
@@ -42,7 +42,7 @@ class ArticleController extends Controller
         Article::create([
             'title' => $request->title,
             'content' => $request->content,
-            'featured_image' => $image_name,
+            'feature_image' => $image_name,
         ]);
         return 'Artikel berhasil disimpan';
     }
